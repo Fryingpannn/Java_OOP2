@@ -17,13 +17,16 @@ public class PublicTransportation
 		nbStops = aNbStops;
 	}
 	
-	//copy constructor
+	
+	/**copy constructor */
 	public PublicTransportation(PublicTransportation aCopy) {
 		ticketPrice = aCopy.ticketPrice;
 		nbStops = aCopy.nbStops;
 	}
 	
 	//overriding equals method
+	/** Null verification is very important. If it isn't included and the equals method is used on a null object,
+	 *  it will terminate the program and throw a NullPointerException error because null points to nothing.*/
 	public boolean equals(Object otherObject) {
 		if(otherObject == null) {
 			return false;

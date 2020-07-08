@@ -1,10 +1,9 @@
-package publicTransport;
+package airTransport;
 
-import airTransport.*;
-import airTransport.AirCraft.AirType;
-import airTransport.AirCraft.TimeType;
-import groundTransport.*;
+import publicTransport.PublicTransportation;
 import seaTransport.Ferry;
+import airTransport.AirCraft.*;
+import groundTransport.*;
 
 public class DriverTransport {
 
@@ -36,13 +35,16 @@ public class DriverTransport {
 		Metro firstTrain = new Metro();
 		Metro secondTrain = new Metro(2.99, 40, 6, 1989, "Orange Line", "Frying Pan", 25, "Montreal");
 		Metro thirdTrain = new Metro(secondTrain);	//copy constructor train
-		System.out.println(firstTrain + "\n" + secondTrain + "\nThe first train is the same as second train: " + firstTrain.equals(secondTrain) 
+		System.out.println(firstTrain + "\n" + secondTrain + "\n" + thirdTrain + "\nThe first train is the same as second train: " + firstTrain.equals(secondTrain) 
 							+ "\nThe second train is the same as third train: " + secondTrain.equals(thirdTrain) + "\n");
 		
 		//testing Tram class
 		Tram firstTram = new Tram();
 		Tram secondTram = new Tram(8.99, 10, 500, 2020, "Purple Line", "Good Grades Please", 999);
 		System.out.println(firstTram + "\n" + secondTram + "\n" + firstTram.equals(secondTram) +"\n");
+		
+		
+		
 		
 		
 		
