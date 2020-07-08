@@ -48,7 +48,7 @@ public class Tram extends CityBus
 	
 	//overriding toString method
 	public String toString() {
-		return ("This Metro's info --> Ticket Price: " + getTicketPrice() + "$ | Number of Stops: " + getNbStops() + " | Route Number: " 
+		return ("This Tram's info --> Ticket Price: " + getTicketPrice() + "$ | Number of Stops: " + getNbStops() + " | Route Number: " 
 				+ getRouteNb() + " | Began Operations Year: " + getBeganOpYr() + " | Line Name: " + getLineName() + " | Driver Name: " + getDriverName()
 				+ " | Maximum Speed: " + maxSpeed + "km/h");
 	}
