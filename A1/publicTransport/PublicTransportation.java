@@ -1,9 +1,9 @@
 /*-------------------------------
- * Name: Matthew Pan             |
+ * Name: Matthew Pan             | 
  * Student ID: 40135588          |
  * Comp 249: Assignment #1       |
  * Driver file: DriverTransport  |
- * Part 1 & 2                    |
+ * Part 2                        |
  * Due Date: 12 July, 2020       |
  * Professor: Dr. Yuhong Yan     |
  *-------------------------------
@@ -12,7 +12,7 @@ package publicTransport;
 /**
  * This is the PublicTransportation class which is the superclass of the AirCraft, Ferry and CityBus classes.
  * 
- * It is also the grandparent class of the Metro and tram classes.
+ * It is also the grandparent class of the Metro and Tram classes.
  * 
  * @author Matthew Pan 40135588
  */
@@ -23,7 +23,7 @@ public class PublicTransportation
 	/**Number of stops*/
 	private int nbStops;
 	
-	/** Sets price and nb of stops to 0*/
+	/**Sets price and nb of stops to 0*/
 	public PublicTransportation() {
 		setTicketPrice(0);
 		setNbStops(0);	//number of stops

@@ -1,9 +1,9 @@
 /*-------------------------------
- * Name: Matthew Pan             |
+ * Name: Matthew Pan             | 
  * Student ID: 40135588          |
  * Comp 249: Assignment #1       |
  * Driver file: DriverTransport  |
- * Part 1 & 2                    |
+ * Part 2                        |
  * Due Date: 12 July, 2020       |
  * Professor: Dr. Yuhong Yan     |
  *-------------------------------

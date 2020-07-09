@@ -1,5 +1,5 @@
 /*-------------------------------
- * Name: Matthew Pan             |
+ * Name: Matthew Pan             | 
  * Student ID: 40135588          |
  * Comp 249: Assignment #1       |
  * Driver file: DriverTransport  |
@@ -17,10 +17,10 @@ package groundTransport;
  */
 public class Tram extends CityBus
 {
-	//*maximum speed*/
+	/**Maximum speed*/
 	private int maxSpeed;	//max speed of Tram
 	
-	//*Default constructor*/
+	/**Sets values to default for this Tram*/
 	public Tram() {
 		super();
 		setMaxSpeed(0);

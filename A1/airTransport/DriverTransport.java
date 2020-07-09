@@ -1,5 +1,5 @@
 /*-------------------------------
- * Name: Matthew Pan             |
+ * Name: Matthew Pan             | 
  * Student ID: 40135588          |
  * Comp 249: Assignment #1       |
  * Driver file: DriverTransport  |
@@ -108,6 +108,10 @@ public class DriverTransport {
 	 * @param args an array of command-line arguments for the application.
 	 */
 	public static void main(String[] args) {
+		
+		//welcome message
+		System.out.println("-------------------------------------------------------------------------------------------------------------------------------------------------");
+		System.out.println("\n Welcome to Matthew Pan's assignment 1 for Comp 249. You will find the details below for both Part 1 and Part 2. Enjoy!\n");
 		/*---> Begin Part 1 <---*/
 		System.out.println("------------------------------------*** Part 1 ***-----------------------------------------------------------------------------------------------\n\n");
 		

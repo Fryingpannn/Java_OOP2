@@ -1,9 +1,9 @@
 /*-------------------------------
- * Name: Matthew Pan             |
+ * Name: Matthew Pan             | 
  * Student ID: 40135588          |
  * Comp 249: Assignment #1       |
  * Driver file: DriverTransport  |
- * Part 1 & 2                    |
+ * Part 2                        |
  * Due Date: 12 July, 2020       |
  * Professor: Dr. Yuhong Yan     |
  *-------------------------------
@@ -99,22 +99,22 @@ public class AirCraft extends PublicTransportation
 				+ getClassType() + " | Maintenance Type: " + getMaintainType());
 	}
 	
-	//*mutator methods (2)*/
+	/**mutator methods (2)*/
 	public void setClassType(AirType aClassType) {
 		classType = aClassType;
 	}
 	
-	//*mutator methods (2)*/
+	/**mutator methods (2)*/
 	public void setMaintainType(TimeType aMaintainType) {
 		maintainType = aMaintainType;
 	}
 	
-	//*accessor methods (2)*/
+	/**accessor methods (2)*/
 	public AirType getClassType() {
 		return classType;
 	}
 	
-	//*accessor methods (2)*/
+	/**accessor methods (2)*/
 	public TimeType getMaintainType() {
 		return maintainType;
 	}

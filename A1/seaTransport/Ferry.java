@@ -1,9 +1,9 @@
 /*-------------------------------
- * Name: Matthew Pan             |
+ * Name: Matthew Pan             | 
  * Student ID: 40135588          |
  * Comp 249: Assignment #1       |
  * Driver file: DriverTransport  |
- * Part 1 & 2                    |
+ * Part 2                    |
  * Due Date: 12 July, 2020       |
  * Professor: Dr. Yuhong Yan     |
  *-------------------------------
@@ -12,7 +12,7 @@ package seaTransport;
 
 import publicTransport.PublicTransportation;
 /**
- * This is the AirCraft class file which extends PublicTransportation.
+ * This is the Ferry class file which extends PublicTransportation.
  * 
  * @author Matthew Pan 40135588
  */
@@ -81,7 +81,7 @@ public class Ferry extends PublicTransportation
 				+ getBuildYr() + " | Ship Name: " + getShipName());
 	}
 	
-	//*mutator methods (2)*/
+	/**mutator methods (2)*/
 	public void setBuildYr(int aBuildYr) {
 		if(aBuildYr < 0) {
 			System.out.println("Input cannot be negative");
@@ -91,17 +91,17 @@ public class Ferry extends PublicTransportation
 		}
 	}
 	
-	//*mutator methods (2)*/
+	/**mutator methods (2)*/
 	public void setShipName(String aShipName) {
 		shipName = aShipName;
 	}
 	
-	//*accessor methods (2)*/
+	/**accessor methods (2)*/
 	public int getBuildYr() {
 		return buildYr;
 	}
 	
-	//*accessor methods (2)*/
+	/**accessor methods (2)*/
 	public String getShipName() {
 		return shipName;
 	}
