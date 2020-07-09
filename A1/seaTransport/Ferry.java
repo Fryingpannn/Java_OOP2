@@ -1,36 +1,65 @@
+/*-------------------------------
+ * Name: Matthew Pan             |
+ * Student ID: 40135588          |
+ * Comp 249: Assignment #1       |
+ * Driver file: DriverTransport  |
+ * Part 1 & 2                    |
+ * Due Date: 12 July, 2020       |
+ * Professor: Dr. Yuhong Yan     |
+ *-------------------------------
+ */
 package seaTransport;
 
 import publicTransport.PublicTransportation;
-
+/**
+ * This is the AirCraft class file which extends PublicTransportation.
+ * 
+ * @author Matthew Pan 40135588
+ */
 public class Ferry extends PublicTransportation
 {
+	/**Year built*/
 	private int buildYr;
+	/**Name of ship*/
 	private String shipName;
 	
-	//default constructor
+
+	/**Sets values to default*/
 	public Ferry() {
 		super();
-		buildYr = 0;
-		shipName = "None";
+		setBuildYr(0);
+		setShipName("None");
 	}
-	
-	//parameterized constructor
+
+	/**
+	 * Sets the 4 parameter values for this Ferry.
+	 * 
+	 * @param aTicketPrice price per ticket
+	 * @param aNbStops number of stops
+	 * @param aBuildYr year built
+	 * @param aShipName name of ship
+	 */
 	public Ferry(double aTicketPrice, int aNbStops, int aBuildYr, String aShipName) {
 		super(aTicketPrice, aNbStops);
-		buildYr = aBuildYr;
-		shipName = aShipName;
+		setBuildYr(aBuildYr);
+		setShipName(aShipName);
 	}
 	
-	//copy constructor
+	/**
+	 * Copy constructor; copies the values inside aCopy to the new obj.
+	 * 
+	 * @param aCopy object to copy from
+	 */
 	public Ferry(Ferry aCopy) {
 		setTicketPrice(aCopy.getTicketPrice());
 		setNbStops(aCopy.getNbStops());
-		buildYr = aCopy.buildYr;
-		shipName = aCopy.shipName;
+		setBuildYr(aCopy.getBuildYr());
+		setShipName(aCopy.getShipName());
 	}
 	
-	//overriding equals method
-	/* Null verification is very important. If it isn't included and the equals method is used on a null object,
+	/**Overriding equals method. 
+	 * 
+	 * Null verification is very important. If it isn't included and the equals method is used on a null object,
 	 * it will terminate the program and throw a NullPointerException error because null points to nothing.*/
 	public boolean equals(Object otherObject) {
 		if(otherObject == null) {
@@ -42,30 +71,37 @@ public class Ferry extends PublicTransportation
 		else {
 			Ferry otherObj = (Ferry) otherObject;
 			return (getTicketPrice() == otherObj.getTicketPrice() && getNbStops() == otherObj.getNbStops()
-					&&  buildYr == otherObj.getBuildYr() && shipName.equals(otherObj.getShipName()));
+					&&  getBuildYr() == otherObj.getBuildYr() && getShipName().equals(otherObj.getShipName()));
 		}
 	}
 	
-	//overriding toString method
+	/**Overriding toString method: displaying all properties of this object*/
 	public String toString() {
 		return ("This Ferry's info --> Ticket Price: " + getTicketPrice() + "$ | Number of Stops: " + getNbStops() + " | Build Year: "
-				+ buildYr + " | Ship Name: " + shipName);
+				+ getBuildYr() + " | Ship Name: " + getShipName());
 	}
 	
-	//mutator methods (2)
+	//*mutator methods (2)*/
 	public void setBuildYr(int aBuildYr) {
-		buildYr = aBuildYr;
+		if(aBuildYr < 0) {
+			System.out.println("Input cannot be negative");
+		}
+		else {
+			buildYr = aBuildYr;
+		}
 	}
 	
+	//*mutator methods (2)*/
 	public void setShipName(String aShipName) {
 		shipName = aShipName;
 	}
 	
-	//accessor methods (2)
+	//*accessor methods (2)*/
 	public int getBuildYr() {
 		return buildYr;
 	}
 	
+	//*accessor methods (2)*/
 	public String getShipName() {
 		return shipName;
 	}
