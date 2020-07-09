@@ -35,8 +35,8 @@ public class DriverTransport {
 	private static PublicTransportation[] copyCityBus(PublicTransportation[] aCopy) {
 		PublicTransportation[] copy = new PublicTransportation[aCopy.length];
 		
-		for(int i = 0; i < aCopy.length; i++) {
-			if(aCopy[i] instanceof Tram) {
+		for(int i = 0; i < aCopy.length; i++) {		
+			if(aCopy[i] instanceof Tram) {				//The use of 'instanceof' here is OK because we are testing the subclasses first.
 				copy[i] = new Tram((Tram) aCopy[i]);
 			}
 			else if(aCopy[i] instanceof Metro){
