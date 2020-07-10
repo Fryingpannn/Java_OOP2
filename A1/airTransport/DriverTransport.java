@@ -16,7 +16,7 @@ import airTransport.AirCraft.*;
 import groundTransport.*;
 
 /**
- * Driver class which creates instances of each class and displays various information regarding each one.
+ * Driver class for everything which creates instances of each class and displays various information regarding each one.
  * 
  * This is the driver class for the PublicTransportation, AirCraft, Ferry, CityBus, Metro and Tram classes.
  * 

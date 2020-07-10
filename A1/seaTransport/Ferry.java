@@ -51,8 +51,7 @@ public class Ferry extends PublicTransportation
 	 * @param aCopy object to copy from
 	 */
 	public Ferry(Ferry aCopy) {
-		setTicketPrice(aCopy.getTicketPrice());
-		setNbStops(aCopy.getNbStops());
+		super(aCopy);
 		setBuildYr(aCopy.getBuildYr());
 		setShipName(aCopy.getShipName());
 	}
@@ -70,8 +69,7 @@ public class Ferry extends PublicTransportation
 		}
 		else {
 			Ferry otherObj = (Ferry) otherObject;
-			return (getTicketPrice() == otherObj.getTicketPrice() && getNbStops() == otherObj.getNbStops()
-					&&  getBuildYr() == otherObj.getBuildYr() && getShipName().equals(otherObj.getShipName()));
+			return (super.equals(otherObject) && getBuildYr() == otherObj.getBuildYr() && getShipName().equals(otherObj.getShipName()));
 		}
 	}
 	

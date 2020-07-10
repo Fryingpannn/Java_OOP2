@@ -72,8 +72,7 @@ public class CityBus extends PublicTransportation
 	 * @param aCopy the object to copy from
 	 */
 	public CityBus(CityBus aCopy) {
-		setTicketPrice(aCopy.getTicketPrice());
-		setNbStops(aCopy.getNbStops());
+		super(aCopy);
 		setRouteNb(aCopy.getRouteNb());
 		setBeganOpYr(aCopy.getBeganOpYr());
 		setLineName(aCopy.getLineName());
@@ -98,7 +97,7 @@ public class CityBus extends PublicTransportation
 		}
 		else {
 			CityBus otherObj = (CityBus) otherObject;
-			return (getTicketPrice() == otherObj.getTicketPrice() && getNbStops() == otherObj.getNbStops()
+			return (super.equals(otherObject)
 					&&  getRouteNb() == otherObj.getRouteNb() && getBeganOpYr() == otherObj.getBeganOpYr()
 					&& 	getLineName().equals(otherObj.getLineName()) && getDriverName().equals(otherObj.getDriverName()));
 		}

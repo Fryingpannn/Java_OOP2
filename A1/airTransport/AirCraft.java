@@ -51,8 +51,7 @@ public class AirCraft extends PublicTransportation
 	 * @param aCopy object to copy from
 	 */
 	public AirCraft(AirCraft aCopy) {
-		setTicketPrice(aCopy.getTicketPrice());
-		setNbStops(aCopy.getNbStops());
+		super(aCopy);
 		setClassType(aCopy.getClassType());
 		setMaintainType(aCopy.getMaintainType());
 	}
@@ -88,8 +87,7 @@ public class AirCraft extends PublicTransportation
 		}
 		else {
 			AirCraft otherObj = (AirCraft) otherObject;
-			return (getTicketPrice() == otherObj.getTicketPrice() && getNbStops() == otherObj.getNbStops()
-					&& getClassType() == otherObj.getClassType() && getMaintainType() == otherObj.getMaintainType());
+			return (super.equals(otherObject) && getClassType() == otherObj.getClassType() && getMaintainType() == otherObj.getMaintainType());
 		}
 	}
 	

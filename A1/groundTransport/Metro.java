@@ -57,12 +57,7 @@ public class Metro extends CityBus
 	 * @param aCopy object to copy from
 	 */
 	public Metro(Metro aCopy) {
-		setTicketPrice(aCopy.getTicketPrice());
-		setNbStops(aCopy.getNbStops());
-		setRouteNb(aCopy.getRouteNb());
-		setBeganOpYr(aCopy.getBeganOpYr());
-		setLineName(aCopy.getLineName());
-		setDriverName(aCopy.getDriverName());
+		super(aCopy);
 		setNbVehicule(aCopy.getNbVehicule());
 		setCityName(aCopy.getCityName());
 	}
@@ -86,10 +81,7 @@ public class Metro extends CityBus
 		}
 		else {
 			Metro otherObj = (Metro) otherObject;
-			return (getTicketPrice() == otherObj.getTicketPrice() && getNbStops() == otherObj.getNbStops()
-					&&  getRouteNb() == otherObj.getRouteNb() && getBeganOpYr() == otherObj.getBeganOpYr()
-					&& 	getLineName().equals(otherObj.getLineName()) && getDriverName().equals(otherObj.getDriverName())
-					&&  getNbVehicule() == otherObj.getNbVehicule() && getCityName() == otherObj.getCityName());
+			return (super.equals(otherObject) && getNbVehicule() == otherObj.getNbVehicule() && getCityName() == otherObj.getCityName());
 		}
 	}
 	
