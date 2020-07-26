@@ -4,3 +4,8 @@ It takes a user input as the name of the new file to be created, then reads the 
 information to the new file.
 
 **Core Practices:** Input/Output classes, exception handling, user validation.
+
+**Sample Example**
+
+![CargoshipExample](https://user-images.githubusercontent.com/59063950/88488587-27ce6500-cf5c-11ea-8504-77497a59fc93.png)
+
