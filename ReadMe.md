@@ -4,6 +4,6 @@ This repository contains many Java programs. Inside each folder you will find an
 **A2:** Part 1 - Truck package delivery simulation. (Inheritance, Polymorphism, Exception Handling, etc.) <br>
 &ensp; &ensp; Part 2 - Cargoship file data correction. (I/O classes, Reading and Writing with Files, Exception Handling, etc.)
 
-
-**A Program Sample (A2 Part 2)**
+<br>
+**A Program Sample (A2 Part 2)** <br>
 ![CargoshipExample](https://user-images.githubusercontent.com/59063950/88488587-27ce6500-cf5c-11ea-8504-77497a59fc93.png)
