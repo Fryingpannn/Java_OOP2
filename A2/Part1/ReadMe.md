@@ -6,3 +6,7 @@ The following classes``` Truck, Package, Letter, Box, Metal Crate, Wood Crate, C
 **UML Diagram**
 
 ![TruckPackageDiagram](https://user-images.githubusercontent.com/59063950/88488117-3ebf8800-cf59-11ea-8a50-97da9ce6c8e9.png)
+
+**Example Look**
+
+![Example](https://user-images.githubusercontent.com/59063950/88488375-ebe6d000-cf5a-11ea-9ec8-390bfee61777.png)
