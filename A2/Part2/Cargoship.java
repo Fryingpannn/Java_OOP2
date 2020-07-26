@@ -1,5 +1,19 @@
+/*---------------------------------
+ * Name: Matthew Pan               | 
+ * Student ID: 40135588            |
+ * Comp 249: Assignment #2         |
+ * Driver file: CargoshipInventory1|
+ * Part 2                          |
+ * Due Date: 25 July, 2020         |
+ * Professor: Dr. Yuhong Yan       |
+ *---------------------------------
+ */
 package Part2;
-
+/**
+ * Cargoship class which contains the properties that are read and written to text files.
+ * 
+ * @author Matthew Pan
+ */
 public class Cargoship {
 	private long serialNb;
 	private String name;		 //continuous string, or separated by _
@@ -93,6 +107,9 @@ public class Cargoship {
 		this.speed = speed;
 	}
 
+	/**
+	 *format to display cargoship in txt document
+	 */
 	public String toString() {
 		return (serialNb + " " + name + " " + creationYr + " " + ownerCountry + " " + price + " " + speed + " ");
 	}

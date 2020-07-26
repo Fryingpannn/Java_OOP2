@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"Part2","l":"Cargoship"},{"p":"Part2","l":"CargoshipInventory1"},{"p":"Part2","l":"DuplicateSerialNumberException"}]

@@ -1,0 +1,15 @@
+900876512 Destroyer 2007 United_States_of_America 826928.35 620
+765867999 Royal_Atlantic 2010 United_Kingdom 997173.25 672
+465979798 Arc_en_Ciel 2008 France 820118.73 639
+760098908 Artios 2006 Greece 911165.20 516
+529086890 Majestic_First 2011 United_Arab_Emirates 998219.99 720
+765867999 Barcross_Castle 2004 South_Africa 798108.33 388
+529086890 Queens_Fair 2012 Canada 909157.87 787
+800003243 Battle_X 2008 United_States_of_America 799117.29 703
+200900210 Night_Swindler 2007 Kingdom_of_Jordan 876109.99 587
+200900210 Deep_Dark 2010 Germany 905127.87 562
+542087665 Whiteburn 1998 Switzerland 711219.59 428
+900876512 Dragon_Fire 2009 Republic_Of_China 967182.95 790
+900876512 Water_SWard 2013 Canada 998182.25 739
+900876512 Star_Finder 2010 Republic_of_India 890122.15 617
+900876512 North_Wind 2010 Canada 767229.25 724

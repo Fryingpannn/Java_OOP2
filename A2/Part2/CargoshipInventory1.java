@@ -1,33 +1,53 @@
+/*---------------------------------
+ * Name: Matthew Pan               | 
+ * Student ID: 40135588            |
+ * Comp 249: Assignment #2         |
+ * Driver file: CargoshipInventory1|
+ * Part 2                          |
+ * Due Date: 25 July, 2020         |
+ * Professor: Dr. Yuhong Yan       |
+ *---------------------------------
+ */
 package Part2;
 
 import java.io.*;
+import java.util.InputMismatchException;
 import java.util.Scanner;
-
+/**
+ * CargoshipInventory1 class which contains the main method and its supporting static methods that reads
+ * from a text file, corrects the wrong serial numbers from it, and write them into a new user created file.
+ * 
+ * @author Matthew Pan
+ */
 public class CargoshipInventory1 {
 	public static Cargoship[] wsArr; //array of cargoships
 	/**
+	 * main method which allows user input to create new a new file, where the cargoship information
+	 * from the old file are corrected and written to it.
 	 * @param args
 	 */
 	public static void main(String[] args) {
+		System.out.println("--------------------- Cargoship Info Correction Program ---------------------\n");
 		
-		System.out.println("--------------------- Cargoships Info Correction Program ---------------------\n");
-		
+		//initializing variables
 		Scanner read = new Scanner(System.in);
 		String initialCargo = "Initial_Cargoship_Info.txt"; //initial file name
+		//String initialCargo = "noduplicate.txt";	//test file with only 0 or 1 cargoship  
+		String newCargo = null;	//Name of new file
+		File test = null;	//used to check if initial file exists
+		
 		
 		//prompting user for new file name
 		boolean loop = true;
-		String newCargo = null;	//Name of new file
-		File exist;	//used to check if initial file exists
 		System.out.print("Enter new file name to store the correct information in (include file format): ");
 		while(loop) {
 			newCargo = read.next();
-			if(!newCargo.equalsIgnoreCase(initialCargo)) {
+			test = new File(newCargo);
+			if(!test.exists()) {
 				loop = false;
 			}
 			else {
-				exist = new File(newCargo);
-				System.out.println("This file name already exist - File size: " + exist.length() + " bytes");
+				System.out.println("\nThis file name already exist - File size: " + test.length() + " bytes");
 				System.out.print("Please enter a non-existing file name: ");
 			}
 		}
@@ -38,11 +58,11 @@ public class CargoshipInventory1 {
 			int count = cargosCount(initialCargo);
 			
 			if(count <= 1) {
-				System.out.println("\n\t[Terminating program - File has no duplicated serial number, all is well!]");
+				System.out.println("\t[Terminating program - File \"" + initialCargo + "\" has no duplicated serial number, all is well!]\n");
 			}
 			else {
 				//extract cargos into array from original file (nb of cargos, initial file name, new file name)
-				fixInventory(count, initialCargo, newCargo);
+				fixInventory(initialCargo, newCargo);
 				
 				//displaying fix msg
 				System.out.println("\n\t[Currently replacing duplicate serial numbers with newly entered numbers...]");
@@ -59,23 +79,24 @@ public class CargoshipInventory1 {
 			}
 		}
 		catch (FileNotFoundException e) {
-			System.err.println("- File could not be found: ");
-			System.err.println(e.getMessage());
-			e.printStackTrace();
+			System.err.println("- File could not be found: " + e.getMessage() + "\n");	
+		}
+		catch (InputMismatchException e) {
+			System.err.println("\n- Please restart program and enter valid inputs.\n");
 		}
 		catch (IOException e) {
 			System.out.println("[IOException error] Stack Trace:");
 			e.printStackTrace();
 		}
 		finally {
-			System.out.println("---------- [Program terminated] Files having been saved and closed. Thank you "
-					+ "for using Cargoship Info Correction ----------");
-		}
-			
+			System.out.print("--------- [Program terminated] Files having been saved and closed. -----------"
+					+ "\n\n\t== Thank you for using Cargoship Info Correction ==");
+			read.close();
+		}	
 	}
 	
 	/**
-	 * counts the number of cargoship objects in a file
+	 * counts the number of cargoship objects in a file and initializes array
 	 * @param initialCargo original file
 	 * @return number of cargoships in file
 	 * @throws FileNotFoundException if cannot find original file
@@ -91,26 +112,25 @@ public class CargoshipInventory1 {
 		}
 		in.close();
 		
+		//initializing array with empty cargoships
+		wsArr = new Cargoship[count];
+		for(int i = 0; i < wsArr.length; i++) {
+			wsArr[i] = new Cargoship();
+		}
 		return count;
 	}
 	
 	/**
-	 * extract cargos into array
+	 * extract cargos into array, write corrected serial numbers into new file
 	 * @param count length of array / nb of cargo objs
 	 * @param initialCargo file name we are reading from
 	 * @param newCargo file name we are writing to
 	 * @throws FileNotFoundException 
 	 * @throws IOException if cannot read from file
 	 */
-	private static void fixInventory(int count, String initialCargo, String newCargo) throws IOException {
+	private static void fixInventory(String initialCargo, String newCargo) throws IOException {
 		Scanner in = new Scanner(new FileReader(initialCargo));
 		PrintWriter out = new PrintWriter(new PrintWriter(newCargo));
-		
-		//initializing array with empty cargoships
-		wsArr = new Cargoship[count];
-		for(int i = 0; i < wsArr.length; i++) {
-			wsArr[i] = new Cargoship();
-		}
 		
 		int j = 0;
 		//filling the cargoships with the extracted information
@@ -125,7 +145,7 @@ public class CargoshipInventory1 {
 		}
 		in.close();
 		
-		//check if there are duplicate serial numbers, and if so, prompt use to replace them
+		//check if there are duplicate serial numbers, and if so, prompt user to replace them
 		checkDuplicate();	
 		
 		//write the newly corrected cargoship objects into the new file
@@ -174,7 +194,7 @@ public class CargoshipInventory1 {
 	 * displays content of a given file
 	 * @param fileName file name to read from
 	 */
-	public static void displayFileContents(String fileName) throws FileNotFoundException {
+	private static void displayFileContents(String fileName) throws FileNotFoundException {
 			Scanner in = new Scanner(new FileReader(fileName));
 
 			int count = 1;
