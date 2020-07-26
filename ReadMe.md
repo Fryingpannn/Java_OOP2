@@ -2,7 +2,7 @@
 
 **A1:** System of public transportation (Inheritance, Polymorphism, packages, etc.) <br>
 **A2:** Part 1 - Truck package delivery simulation. (Inheritance, Polymorphism, Exception Handling, etc.) <br>
-&ensp; &ensp; Part 2 - Cargoship file data correction. (I/O classes, Reading and Writing with Files, Exception Handling, etc.)
+&ensp; &ensp; Part 2 - Cargoship file data correction. (File I/O classes, Reading and Writing with Files, Exception Handling, etc.)
 
 
 **A Program Sample (A2 Part 2)** <br>
