@@ -85,7 +85,7 @@ public class MetalCrate extends Package {
 			}
 		}
 		catch (PackageException e) {
-			System.err.println(e.getMessage());
+			System.out.println(e.getMessage());
 			super.setTrackingNb(-4);
 		}
 	}

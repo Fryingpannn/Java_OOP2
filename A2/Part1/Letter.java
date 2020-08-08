@@ -93,7 +93,7 @@ public class Letter extends Package{
 			}
 		}
 		catch (PackageException e) {
-			System.err.println(e.getMessage());
+			System.out.println(e.getMessage());
 			super.setTrackingNb(-1);
 		}
 	}
