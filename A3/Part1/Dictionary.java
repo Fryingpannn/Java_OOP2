@@ -21,7 +21,7 @@ import java.io.FileNotFoundException;
  * This Dictionary class' program allows the user to input a file. The file is subsequently read from, formatted, and stored inside an
  * Array List which is then sorted. Then, a new SubDictionary.txt file is created to uniquely store the vocabulary from the previous 
  * file alphabetically.
- * Practiced: File IO, ArrayList, Sorting, etc.
+ * Concepts: File IO, ArrayList, Sorting, etc.
  * @author pan
  *
  */

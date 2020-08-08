@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"Part2","l":"CellList"},{"p":"Part2","l":"CellListUtilization"},{"p":"Part2","l":"CellList.CellNode"},{"p":"Part2","l":"CellPhone"},{"p":"Part1","l":"Dictionary"}]
