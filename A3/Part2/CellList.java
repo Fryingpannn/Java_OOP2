@@ -14,7 +14,7 @@ import java.util.NoSuchElementException;
 /**
  * This is the linked list class which stores objects of type CellPhone.
  * 
- * @author pan
+ * @author Matthew Pan
  */
 public class CellList {
 	

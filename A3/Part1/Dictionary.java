@@ -22,8 +22,8 @@ import java.io.FileNotFoundException;
  * Array List which is then sorted. Then, a new SubDictionary.txt file is created to uniquely store the vocabulary from the previous 
  * file alphabetically.
  * Concepts: File IO, ArrayList, Sorting, etc.
- * @author pan
- *
+ * 
+ * @author Matthew pPan
  */
 public class Dictionary {
 	

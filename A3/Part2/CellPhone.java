@@ -14,7 +14,7 @@ import java.util.Scanner;
 /**
  * This is the CellPhone class. Objects of this class will be stored inside a CellList.
  * 
- * @author pan
+ * @author Matthew Pan
  */
 public class CellPhone {
 	private long serialNum;	//always unique
