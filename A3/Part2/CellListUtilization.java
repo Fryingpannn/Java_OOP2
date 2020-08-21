@@ -21,7 +21,7 @@ import java.util.Scanner;
  * 
  * Concepts: LinkedList data structure; creating a linked list, nodes/references and its methods + File I/O; reading data from text file into objects.
  * 
- * @author pan
+ * @author Matthew Pan
  */
 public class CellListUtilization {
 
@@ -82,8 +82,8 @@ public class CellListUtilization {
 		
 		//testing all methods from CellPhone class
 		System.out.println("\n========= Testing clone & equals method from CellPhone class: ========= \n");
-		System.out.println("\t== [test.clone();] ==");
-		CellPhone test = new CellPhone(122, "Google", 500, 2008);
+		System.out.println("\t== [test.clone();] On Google phone (122) ==");
+		CellPhone test = new CellPhone(122, "Google", 500, 2008); //cloning <---------------------------------------
 		CellPhone clonedTest = test.clone();
 		System.out.println("Displaying both Cell Phones: ");
 		System.out.println(test);

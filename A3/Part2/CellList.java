@@ -61,7 +61,7 @@ public class CellList {
 		
 		/*
 		 * - ACCESSOR & MUTATOR METHODS:
-		 * These methods that are asked for the CellNode class have not been added. The reason being that since
+		 * Accessor/mutator methods for the CellNode class have not been added. The reason being that since
 		 * this inner class is private, there is no need for getters/setters as we may directly reference the attributes,
 		 * and they would also be inaccessible from outside of the outer class.
 		 * */
